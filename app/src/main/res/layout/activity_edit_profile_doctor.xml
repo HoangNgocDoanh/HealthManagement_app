@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context=".EditProfileDoctorActivity">
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/txtcity_doctor"
+        android:layout_width="132dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="72dp"
+        android:hint="City"
+        app:layout_constraintEnd_toStartOf="@+id/txtstate_doctor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtemail_doctor" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/txtcountry_doctor"
+        android:layout_width="132dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="72dp"
+        android:hint="Country"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtstress_doctor"
+        app:layout_constraintTop_toBottomOf="@+id/txtemail_doctor" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/txtstress_doctor"
+        android:layout_width="132dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:hint="Stress"
+        app:layout_constraintEnd_toStartOf="@+id/txtstate_doctor"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtemail_doctor" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/txtstate_doctor"
+        android:layout_width="132dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:hint="State"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtstress_doctor"
+        app:layout_constraintTop_toBottomOf="@+id/txtemail_doctor" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/txtgender_doctor"
+        android:layout_width="333dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:hint="Male or Female"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtfullname_doctor" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:gravity="center"
+        android:text="Edit profile - Doctor"
+        android:textColor="@color/colorAccent"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/txtfullname_doctor"
+        android:layout_width="333dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/full_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/txtfauculty"
+        android:layout_width="333dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="368dp"
+        android:hint="Faculty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/txtemail_doctor"
+        android:layout_width="331dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtbirthday_doctor"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/txtbirthday_doctor"
+        android:layout_width="334dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:hint="Year of Birth"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtgender_doctor"
+        app:layout_constraintVertical_bias="0.028" />
+
+    <Button
+        android:id="@+id/btnUpdate_doctor"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Update"
+        android:onClick="SaveInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtfauculty" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
